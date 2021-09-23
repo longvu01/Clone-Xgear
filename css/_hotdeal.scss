@@ -1,0 +1,18 @@
+.hotdeal {
+    margin-top: 55px;
+    &__option {
+        &-item {
+            text-transform: uppercase;
+            color: $red;
+            font-weight: 600;
+            font-size: 1.6rem;
+            padding: 16px;
+            text-decoration: none;
+            background-color: #ebebeb;
+            display: inline-block;
+        }
+    }
+    &--active {
+        background-color: #fff;
+    }
+}

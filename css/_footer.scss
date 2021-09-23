@@ -1,0 +1,111 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 20px;
+    grid-gap: 16px;
+    margin-bottom: 30px;
+    &__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        display: block;
+        display: flex;
+        align-items: center;
+        &--logo {
+            padding: 2px;
+            border-radius: 4px;
+            font-size: 2rem;
+            min-width: 28px;
+            margin-right: 24px;
+        }
+        &:first-of-type .footer__link--logo {
+            color: #3b5998 !important;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+        &:nth-of-type(2) .footer__link--logo {
+            color: #6ec8f6 !important;
+            background-color: #f3d4e2;
+        }
+        &:nth-of-type(3) .footer__link--logo {
+            color: #fff !important;
+            background-image: linear-gradient(to right, #fcd771, #d43d94);
+            text-align: center;
+        }
+        &:last-of-type .footer__link--logo {
+            color: #000 !important;
+            background-image: linear-gradient(to right, #44efeb, #b73e61);
+            text-align: center;
+        }
+        &:hover {
+            color: rgb(80, 91, 245);
+        }
+    }
+    &__certification,
+    &__copyright {
+        font-size: 1.1rem;
+        color: #999;
+        line-height: 1.4;
+        margin-bottom: 40px;
+    }
+    &__copyright {
+        color: #000;
+    }
+    &__payment {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    &__hotline {
+        list-style-type: disc;
+        &-item {
+            margin-left: 12px;
+        }
+        & span,
+        &-item {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-top: 8px;
+            color: #999;
+        }
+    }
+    &__img {
+        &--sale-noti {
+            width: 90%;
+            margin-top: 40px;
+        }
+        &--badge {
+            margin-top: 40px;
+        }
+    }
+    &__location {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #999;
+        margin-bottom: 8px;
+        line-height: 1.4;
+        & span {
+            font-weight: bold;
+            color: #000;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        & {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 24px 16px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        & {
+            grid-template-columns: 1fr;
+            grid-gap: 16px;
+        }
+    }
+}

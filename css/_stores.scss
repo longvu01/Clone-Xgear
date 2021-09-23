@@ -1,0 +1,84 @@
+.stores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+    grid-template-areas:
+        "acer   asus   msi    pc"
+        "slider slider slider aorus"
+        "slider slider slider gear"
+        "slider slider slider monitor";
+    &__img {
+        &--acer {
+            grid-area: acer;
+            height: 100%;
+        }
+        &--asus {
+            grid-area: asus;
+            height: 100%;
+        }
+        &--msi {
+            grid-area: msi;
+            height: 100%;
+        }
+        &--pc {
+            grid-area: pc;
+            height: 100%;
+        }
+        &--aorus {
+            grid-area: aorus;
+            height: 100%;
+        }
+        &--gear {
+            grid-area: gear;
+            height: 100%;
+        }
+        &--monitor {
+            grid-area: monitor;
+            height: 100%;
+        }
+    }
+    .slider {
+        grid-area: slider;
+    }
+    .slider__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media screen and (max-width: 767px) {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .slider {
+            display: none;
+        }
+        & {
+            display: grid;
+            justify-content: flex-start;
+            grid-auto-columns: 90%;
+            grid-auto-flow: column;
+            grid-gap: 1.5rem;
+            overflow: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            -webkit-overflow-scrolling: touch;
+            scroll-padding: 1rem;
+            grid-template-columns: unset;
+            grid-template-areas: unset;
+            grid-template-rows: unset;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+        }
+        & > * {
+            scroll-snap-align: start;
+        }
+    }
+}
